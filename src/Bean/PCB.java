@@ -10,7 +10,7 @@ public class PCB {
     private int id;//进程标识符
     private String name;//进程名称
     private int memory;//进程占用内存空间
-    private int times;//进程运行时间片
+    private int times;//进程运行
     private String state;//进程状态:C创建状态，R就绪状态，B阻塞状态，P执行状态，E终止状态；
     private int io;//进程是否需要申请io设备	0--不需要，1--需要
     private int priority;//进程优先级

@@ -11,6 +11,15 @@ public class OSResource {
     private static int MaxOsMemory;//操作系统最大内存大小
     private static int cpuState;//cpu状态：小于0 程序异常 0:无法为其他进程分配 大于0:可以分配
     private static int ioState;//io设备状态：0--未占用，1--正在使用
+    private static int run = 1;
+
+    public static int getRun() {
+        return run;
+    }
+
+    public static void setRun(int run) {
+        OSResource.run = run;
+    }
 
     public static int getMaxOsMemory() {
         return MaxOsMemory;
@@ -45,9 +54,10 @@ public class OSResource {
     }
 
     public static void OSInit(){
-        setOSMemory(20);
-        setMaxOsMemory(20);
-        setCpuState(1);
+        setOSMemory(2048);
+        setMaxOsMemory(2048);
+        setCpuState(2);
         setIoState(0);
     }
+
 }
